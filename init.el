@@ -1,37 +1,63 @@
-;; package begin
+;;; begin package
 
 (require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives '("tromey" . "http://tromey.com/elpa/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit starter-kit-bindings color-theme-sanityinc-solarized)
+(defvar my-packages '(starter-kit
+                      starter-kit-bindings
+                      color-theme-sanityinc-solarized
+                      php-mode
+                      flymake-php)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
 
-;; package end
+;;; end package
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
- '(ansi-color-names-vector (vector "#52676f" "#c60007" "#728a05" "#a57705" "#2075c7" "#c61b6e" "#259185" "#fcf4dc"))
- '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
- '(custom-safe-themes (quote ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
- '(fci-rule-color "#e9e2cb"))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+;;; begin general
+
+(setq user-mail-address "tangchang21@gmail.com")
+(setq user-full-name "Tony Tang")
+
+; font-size 14px
+(set-face-attribute 'default nil :height 140)
+; set frame size, might be overwrite in local.el
+(setq default-frame-alist '((width . 157) (height . 39)))
+
+; use solarized theme
+(require 'color-theme-sanityinc-solarized)
+(color-theme-sanityinc-solarized-light)
+
+(menu-bar-mode)
+(column-number-mode)
+
+;;; end general
+
+
+
+;;; beigin require init-*
+ 
+(add-to-list 'load-path (expand-file-name (file-name-directory load-file-name)))
+
+(require 'init-utils)
+(require 'init-binding)
+
+(require 'init-php)
+
+;;; end require init-*
+
+
+
+; load local.el to overwrite some machine specific settings if exists
+(let ((local-config-file (concat (file-name-directory load-file-name) "local.el")))
+   (if (file-exists-p local-config-file) (load local-config-file)))
