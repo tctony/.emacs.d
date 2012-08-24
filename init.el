@@ -14,6 +14,7 @@
                       color-theme-sanityinc-solarized
                       php-mode
                       flymake-php
+                      autopair
                       )
   "A list of packages to ensure are installed at launch.")
 
@@ -38,6 +39,7 @@
 (require 'init-utils)
 (require 'init-binding)
 
+(require 'init-programming)
 (require 'init-php)
 
 ;;; end require init-*
