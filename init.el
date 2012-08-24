@@ -12,15 +12,19 @@
 (defvar my-packages '(starter-kit
                       starter-kit-bindings
                       color-theme-sanityinc-solarized
+                      autopair
+                      auto-complete
                       php-mode
                       flymake-php
-                      autopair
                       )
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+;; package require fix
+(require 'autopair)
 
 ;;; end package
 
@@ -39,8 +43,9 @@
 (require 'init-utils)
 (require 'init-binding)
 
-(require 'init-programming)
+(require 'init-prog)
 (require 'init-php)
+(require 'init-auto-complete)
 
 ;;; end require init-*
 
