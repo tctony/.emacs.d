@@ -13,13 +13,18 @@
                       starter-kit-bindings
                       color-theme-sanityinc-solarized
 
-                      autopair
-                      auto-complete
                       php-mode
                       flymake-php
                       multi-web-mode
+
+                      yasnippet
+
+                      autopair
+                      auto-complete
+
                       rainbow-mode
                       rainbow-delimiters
+
                       )
   "A list of packages to ensure are installed at launch.")
 
