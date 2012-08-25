@@ -13,5 +13,7 @@
 
 (setq show-trailing-whitespace t)
 
+(make-face-unitalic 'font-lock-comment-face) ; for missing chinese italic font
+
 
 (provide 'init-basic)
