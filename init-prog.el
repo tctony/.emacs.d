@@ -3,7 +3,9 @@
 
 (defun prog-hook-fun ()
   (progn
+    (require 'autopair)
     (autopair-mode)
+    (rainbow-delimiters-mode)
     ))
 
 (add-hook 'prog-mode-hook 'prog-hook-fun)
