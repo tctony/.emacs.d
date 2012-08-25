@@ -6,7 +6,8 @@
 (setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
 (multi-web-global-mode 1)
 
-(add-hook 'html-mode 'autopair-mode)
+(add-hook 'html-mode-hook (lambda () (setq sgml-basic-offset 4)))
+(add-hook 'html-mode-hook 'autopair-mode)
 
 
 (provide 'init-web)

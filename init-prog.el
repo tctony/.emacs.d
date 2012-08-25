@@ -3,12 +3,13 @@
 
 (defun prog-hook-fun ()
   (progn
+
     (require 'autopair)
     (autopair-mode)
 
-    (require 'yasnippet)
-    (yas-minor-mode)
-
+    ;; (require 'yasnippet)
+    ;; (yas-minor-mode
+    
     (rainbow-delimiters-mode)
     ))
 
