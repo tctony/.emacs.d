@@ -8,6 +8,7 @@
 
 (add-hook 'html-mode-hook (lambda () (setq sgml-basic-offset 4)))
 (add-hook 'html-mode-hook 'autopair-mode)
+(add-hook 'html-mode-hook 'auto-complete-mode)
 
 
 (provide 'init-web)
