@@ -50,10 +50,10 @@
 (require 'init-binding)
 
 (require 'init-prog)
+(require 'init-auto-complete)
 (require 'init-php)
 (require 'init-css)
 (require 'init-web)
-(require 'init-auto-complete)
 
 ;;; end require init-*
 

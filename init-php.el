@@ -1,8 +1,12 @@
 (add-auto-mode 'php-mode "\\.php[345]?\\'\\|\\.phtml\\'" "\\.tpl\\'")
 
-;(add-hook 'php-mode-hook 'flymake-php-load)
+(defun php-mode-hook-function ()
+  (progn
+    (setq ac-sources (append '() ac-sources))
+    ;(flymake-php-load)
+    ))
 
-;(autoload 'smarty-mode "smarty-mode" "Smarty Mode" t)
-;(add-auto-mode 'smarty-mode "\\.phtml\\'")
+(add-hook 'php-mode-hook 'php-mode-hook-function)
+
 
 (provide 'init-php)

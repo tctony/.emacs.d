@@ -15,5 +15,6 @@
 
 (make-face-unitalic 'font-lock-comment-face) ; for missing chinese italic font
 
+(global-set-key (kbd "<f7>") 'comment-or-uncomment-region)
 
 (provide 'init-basic)

@@ -1,15 +1,15 @@
 ;remove auto-fill-mode from prog-mode-hook in starter-kit
 (remove-hook 'prog-mode-hook 'esk-local-comment-auto-fill)
 
+(require 'yasnippet)
+(yas-global-mode t)
+
 (defun prog-hook-fun ()
   (progn
 
     (require 'autopair)
     (autopair-mode)
 
-    ;; (require 'yasnippet)
-    ;; (yas-minor-mode
-    
     (rainbow-delimiters-mode)
     ))
 
