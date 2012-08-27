@@ -13,7 +13,7 @@
 
 (setq show-trailing-whitespace t)
 
-(make-face-unitalic 'font-lock-comment-face) ; for missing chinese italic font
+(set-face-italic-p 'italic nil) ; disable italic face
 
 (global-set-key (kbd "<f7>") 'comment-or-uncomment-region)
 
