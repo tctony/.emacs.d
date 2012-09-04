@@ -57,6 +57,7 @@
 
 ;;; end require init-*
 
+(server-start)
 
 ;;; machine related
 (set-face-attribute 'default nil :height 140) ;font size 14px
