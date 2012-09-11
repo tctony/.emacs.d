@@ -16,6 +16,8 @@
 (set-face-italic-p 'italic nil)
 (make-face-unitalic 'font-lock-comment-face)
 
+(global-auto-revert-mode 1)
+
 (global-set-key (kbd "<f7>") 'comment-or-uncomment-region)
 
 (provide 'init-basic)
