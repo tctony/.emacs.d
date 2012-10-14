@@ -15,6 +15,12 @@
 
 (add-hook 'prog-mode-hook 'prog-hook-fun)
 
-(setq-default c-basic-offset 4)
+(custom-set-variables '(tab-width 4)
+                      '(c-basic-offset tab-width)
+                      '(indent-tabs-mode nil tab-width)
+                      '(css-indent-offset tab-width)
+                      '(nxml-child-indent tab-width)
+                      '(mumamo-submode-indent-offset tab-width)
+                      )
 
 (provide 'init-prog)

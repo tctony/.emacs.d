@@ -1,7 +1,6 @@
 (menu-bar-mode)
 (column-number-mode)
 (line-number-mode)
-(global-linum-mode)
 
 ;remove hooks added in starter-kit
 (remove-hook 'text-mode-hook 'turn-on-flyspell)

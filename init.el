@@ -1,5 +1,7 @@
 ;;; begin package
 
+(setq emacs-config-dir (file-name-directory load-file-name))
+
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives '("tromey" . "http://tromey.com/elpa/") t)
@@ -13,11 +15,9 @@
                       starter-kit-bindings
                       color-theme-sanityinc-solarized
 
-                      php-mode
-                      flymake-php
-                      multi-web-mode
-
                       yasnippet
+
+                      php-mode
 
                       autopair
                       auto-complete
@@ -64,5 +64,5 @@
 (setq default-frame-alist '((width . 157) (height . 39))) ;frame size fullscreen
 
 ; load local.el to overwrite some machine specific settings if exists
-(let ((local-config-file (concat (file-name-directory load-file-name) "local.el")))
+(let ((local-config-file (concat emacs-config-dir "local.el")))
    (if (file-exists-p local-config-file) (load local-config-file)))
