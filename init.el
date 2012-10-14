@@ -19,6 +19,8 @@
 
                       php-mode
 
+                      js2-mode
+                      
                       autopair
                       auto-complete
 
@@ -53,6 +55,7 @@
 (require 'init-auto-complete)
 (require 'init-php)
 (require 'init-css)
+(require 'init-js)
 (require 'init-web)
 
 ;;; end require init-*
