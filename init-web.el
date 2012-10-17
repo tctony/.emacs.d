@@ -1,36 +1,11 @@
 (setq sgml-basic-offset 4)
 
-(require 'mmm-mode)
-(setq mmm-global-mode 'maybe)
-(setq mmm-submode-decoration-level 2)
-
-(mmm-add-classes
- '((embedded-css
-    :submode css-mode
-     :face mmm-declaration-submode-face
-    :front "style=\""
-    :back "\"")))
-(mmm-add-classes
- '((embedded-javascript
-    :submode js2-mode
-    :face mmm-code-submode-face
-    :front "<script\[^>\]*>"
-    :back "</script>")))
-(mmm-add-classes
- '((embedded-php
-    :submode php-mode
-    :face mmm-code-submode-face
-    :front "<?php"
-    :back "?>")))
-
-(add-auto-mode 'html-mode "\\.phtml$")
-
-(add-to-list 'mmm-mode-ext-classes-alist
-             '(html-mode nil embedded-css))
-(add-to-list 'mmm-mode-ext-classes-alist
-             '(html-mode nil embedded-javascript))
-(add-to-list 'mmm-mode-ext-classes-alist
-             '(html-mode nil embedded-php))
-
+(require 'multi-web-mode)
+(setq mweb-default-major-mode 'html-mode)
+(setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
+                  (js-mode "<script +\\(type=\"text/javascript\"\\|language=\"javascript\"\\)[^>]*>" "</script>")
+                  (css-mode "<style +type=\"text/css\"[^>]*>" "</style>")))
+(setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
+(multi-web-global-mode 1)
 
 (provide 'init-web)

@@ -19,7 +19,7 @@
 
                       js2-mode
 
-                      mmm-mode
+                      multi-web-mode
                       
                       yasnippet
                       auto-complete
