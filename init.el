@@ -51,6 +51,8 @@
 (require 'init-utils)
 (require 'init-binding)
 
+(require 'init-org)
+
 (require 'init-prog)
 (require 'init-auto-complete)
 (require 'init-php)
