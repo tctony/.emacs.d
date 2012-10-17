@@ -15,15 +15,16 @@
                       starter-kit-bindings
                       color-theme-sanityinc-solarized
 
-                      yasnippet
-
                       php-mode
 
                       js2-mode
+
+                      mmm-mode
                       
-                      autopair
+                      yasnippet
                       auto-complete
 
+                      autopair
                       rainbow-mode
                       rainbow-delimiters
 
