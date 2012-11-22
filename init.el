@@ -15,6 +15,9 @@
                       starter-kit-bindings
                       color-theme-sanityinc-solarized
 
+                      google-c-style
+                      google-this
+
                       php-mode
 
                       js2-mode
@@ -67,7 +70,7 @@
 
 ;;; machine related
 (set-face-attribute 'default nil :height 140) ;font size 14px
-(setq default-frame-alist '((width . 157) (height . 39))) ;frame size fullscreen
+(setq default-frame-alist '((width . 177) (height . 47))) ;frame size fullscreen
 
 ; load local.el to overwrite some machine specific settings if exists
 (let ((local-config-file (concat emacs-config-dir "local.el")))

@@ -17,6 +17,7 @@
 
 (global-auto-revert-mode 1)
 
-(global-set-key (kbd "<f7>") 'comment-or-uncomment-region)
+(require 'google-this)
+(google-this-mode 1)
 
 (provide 'init-basic)
