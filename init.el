@@ -13,6 +13,7 @@
 
 (defvar my-packages '(starter-kit
                       starter-kit-bindings
+
                       color-theme-sanityinc-solarized
 
                       google-c-style
@@ -30,7 +31,6 @@
                       autopair
                       rainbow-mode
                       rainbow-delimiters
-
                       )
   "A list of packages to ensure are installed at launch.")
 
@@ -44,7 +44,7 @@
 (setq user-mail-address "tangchang21@gmail.com")
 (setq user-full-name "Tony Tang")
                                         
-(require 'color-theme-sanityinc-solarized) ;use solarized theme
+(require 'color-theme-sanityinc-solarized)
 (color-theme-sanityinc-solarized-light)
 
 ;;; beigin require init-*
@@ -58,7 +58,10 @@
 (require 'init-org)
 
 (require 'init-prog)
+(require 'init-yasnippet)
 (require 'init-auto-complete)
+(require 'init-cedet)
+
 (require 'init-php)
 (require 'init-css)
 (require 'init-js)
@@ -68,10 +71,9 @@
 
 (server-start)
 
-;;; machine related
-(set-face-attribute 'default nil :height 140) ;font size 14px
-(setq default-frame-alist '((width . 177) (height . 47))) ;frame size fullscreen
-
 ; load local.el to overwrite some machine specific settings if exists
+; such as: font size and frame size
+; (set-face-attribute 'default nil :height 140) ;font size 14px
+; (setq default-frame-alist '((width . 177) (height . 47))) ;frame size fullscreen on my air
 (let ((local-config-file (concat emacs-config-dir "local.el")))
    (if (file-exists-p local-config-file) (load local-config-file)))
