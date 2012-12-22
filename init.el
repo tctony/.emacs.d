@@ -16,6 +16,10 @@
 
                       color-theme-sanityinc-solarized
 
+                      yasnippet
+                      auto-complete
+                      ecb
+
                       google-c-style
                       google-this
 
@@ -25,9 +29,6 @@
 
                       multi-web-mode
                       
-                      yasnippet
-                      auto-complete
-
                       autopair
                       rainbow-mode
                       rainbow-delimiters
@@ -45,7 +46,7 @@
 (setq user-full-name "Tony Tang")
                                         
 (require 'color-theme-sanityinc-solarized)
-(color-theme-sanityinc-solarized-light)
+(color-theme-sanityinc-solarized-dark)
 
 ;;; beigin require init-*
  
@@ -77,3 +78,4 @@
 ; (setq default-frame-alist '((width . 177) (height . 47))) ;frame size fullscreen on my air
 (let ((local-config-file (concat emacs-config-dir "local.el")))
    (if (file-exists-p local-config-file) (load local-config-file)))
+

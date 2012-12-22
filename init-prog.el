@@ -17,4 +17,6 @@
                       '(css-indent-offset tab-width)
                       )
 
+(global-set-key (kbd "C-c m") 'compile)
+
 (provide 'init-prog)
