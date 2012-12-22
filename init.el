@@ -57,6 +57,7 @@
 (require 'init-binding)
 
 (require 'init-org)
+(require 'init-erc)
 
 (require 'init-prog)
 (require 'init-yasnippet)
