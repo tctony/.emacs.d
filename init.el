@@ -75,6 +75,8 @@
 (require 'init-js)
 (require 'init-web)
 
+(require 'init-markdown)
+
 ;;; end require init-*
 
 (server-start)
