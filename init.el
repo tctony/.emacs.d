@@ -30,6 +30,9 @@
                       js2-mode
 
                       multi-web-mode
+
+                      yaml-mode
+                      markdown-mode
                       
                       autopair
                       rainbow-mode
