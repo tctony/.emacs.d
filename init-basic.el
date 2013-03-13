@@ -4,7 +4,7 @@
 
 ;remove hooks added in starter-kit
 (remove-hook 'text-mode-hook 'turn-on-flyspell)
-(remove-hook 'text-mode-hook 'turn-on-auto-fill)
+;(remove-hook 'text-mode-hook 'turn-on-auto-fill)
 (remove-hook 'prog-mode-hook 'idle-highlight-mode)
 
 (setq default-tab-width 4)

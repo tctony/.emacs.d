@@ -23,6 +23,8 @@
                       google-c-style
                       google-this
 
+                      python-mode
+
                       php-mode
 
                       js2-mode
@@ -46,7 +48,7 @@
 (setq user-full-name "Tony Tang")
                                         
 (require 'color-theme-sanityinc-solarized)
-(color-theme-sanityinc-solarized-dark)
+(color-theme-sanityinc-solarized-light)
 
 ;;; beigin require init-*
  
@@ -64,6 +66,7 @@
 (require 'init-auto-complete)
 (require 'init-cedet)
 
+(require 'init-python)
 (require 'init-php)
 (require 'init-css)
 (require 'init-js)
@@ -79,4 +82,3 @@
 ; (setq default-frame-alist '((width . 177) (height . 47))) ;frame size fullscreen on my air
 (let ((local-config-file (concat emacs-config-dir "local.el")))
    (if (file-exists-p local-config-file) (load local-config-file)))
-
