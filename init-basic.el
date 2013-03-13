@@ -4,7 +4,7 @@
 
 ;remove hooks added in starter-kit
 (remove-hook 'text-mode-hook 'turn-on-flyspell)
-;(remove-hook 'text-mode-hook 'turn-on-auto-fill)
+(remove-hook 'text-mode-hook 'turn-on-auto-fill) ; too annoy
 (remove-hook 'prog-mode-hook 'idle-highlight-mode)
 
 (setq default-tab-width 4)
@@ -12,7 +12,9 @@
 (setq indent-tabs-mode nil)
 
 (setq show-trailing-whitespace t)
+(whitespace-mode)
 
+; fix some font problem
 (set-face-italic-p 'italic nil)
 (make-face-unitalic 'font-lock-comment-face)
 
