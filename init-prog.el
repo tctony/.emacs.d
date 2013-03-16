@@ -7,6 +7,8 @@
     (autopair-mode)
 
     (rainbow-delimiters-mode)
+
+    (whitespace-mode)
     ))
 
 (add-hook 'prog-mode-hook 'prog-hook-fun)

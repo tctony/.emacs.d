@@ -12,7 +12,6 @@
 (setq indent-tabs-mode nil)
 
 (setq show-trailing-whitespace t)
-(whitespace-mode)
 
 ; fix some font problem
 (set-face-italic-p 'italic nil)
