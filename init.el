@@ -31,9 +31,11 @@
 
                       multi-web-mode
 
+                      nginx-mode
+
                       yaml-mode
                       markdown-mode
-                      
+
                       autopair
                       rainbow-mode
                       rainbow-delimiters
@@ -49,12 +51,12 @@
 
 (setq user-mail-address "tangchang21@gmail.com")
 (setq user-full-name "Tony Tang")
-                                        
+
 (require 'color-theme-sanityinc-solarized)
 (color-theme-sanityinc-solarized-light)
 
 ;;; beigin require init-*
- 
+
 (add-to-list 'load-path (expand-file-name (file-name-directory load-file-name)))
 
 (require 'init-basic)
