@@ -31,6 +31,8 @@
 
                       multi-web-mode
 
+                      protobuf-mode
+
                       nginx-mode
 
                       yaml-mode
