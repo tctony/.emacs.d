@@ -5,6 +5,8 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
+(add-hook 'org-mode-hook 'turn-on-auto-fill)
+
 (setq org-hide-leading-stars t)
 
 (provide 'init-org)
