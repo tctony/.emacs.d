@@ -55,7 +55,7 @@
 (setq user-full-name "Tony Tang")
 
 (require 'color-theme-sanityinc-solarized)
-(color-theme-sanityinc-solarized-light)
+(load-theme 'sanityinc-solarized-light t)
 
 ;;; beigin require init-*
 
